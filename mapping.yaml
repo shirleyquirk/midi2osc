@@ -1,0 +1,22 @@
+- input:
+    channel: 9
+    cc: 119
+  output:
+    path: /rigs/0/functionRate
+# order-agnostic
+- output:
+    path: /rigs/2/functionRate
+  input:
+    channel: 9
+    cc: 118
+# noteOn,noteOff
+- input:
+    channel: 7
+    note: 55
+  output:
+    path: /rigs/5/toggleFoo
+    # we can either
+    # send velocity on noteOn
+    # and 0 on noteOff to the same path
+    # or velocity to one path on noteOn
+    # and void to another path on noteOff
